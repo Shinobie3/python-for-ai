@@ -1,3 +1,4 @@
+
 class person:
     def __init__(self, name, age):
         self.name = name
@@ -15,14 +16,12 @@ class person_extended(person):
         print(f"""My name is {self.name} and I'm {self.age} years old! 
               I am from {self.country} and have the following hobbies: {self.hobby}""")
         
-
-
-
-kenthi = person("Kentiii", 62)
-print(kenthi.ReadOut())
-
-mama = person("mama", 57)
-print(mama.ReadOut())
-
-kenthi_v = person_extended("Kenthi", 62, "motorcycle", "Germany")
-print(kenthi_v.ReadOut())
+try:
+    name = input("What is your name? ")
+    age = str(input("What is your age? "))
+    county = input("What country are you from? ")
+    hobby = input("What are your hobbies? ")
+    user = person_extended(name, age, hobby, county)
+    print(user.ReadOut())
+except Exception as e:
+    print(f"An error occurred: {e}")

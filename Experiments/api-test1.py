@@ -5,7 +5,7 @@ import requests
 print("Welcome to weather API")
 name = input("Please enter the city name")
 
-gmaps = googlemaps.Client(key="AIzaSyAaGMWWFUVsFaIMcjo66vSts94ES0etG6I")
+gmaps = googlemaps.Client(key="your_api_key_here")
 geocode_result = gmaps.geocode(name)
 
 if not geocode_result:
